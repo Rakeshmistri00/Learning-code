@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main(){
+    float a1,b1,c1,d1;
+    float a2,b2,c2,d2;
+    float a3,b3,c3,d3;
+    float x=0,y=0,z=0;
+    int n,i;
+        printf("enter the coefficient of 1 (a1 b1 c1 d1 ):\n");
+        scanf("%f%f%f%f",&a1,&b1,&c1,&d1);
+        printf("enter the coefficient of 2 (a2 b2 c2 d2 ):\n");
+        scanf("%f%f%f%f",&a2,&b2,&c2,&d2);
+        printf("enter the coefficient of 3 (a3 b3 c3 d3 ):\n");
+        scanf("%f%f%f%f",&a3,&b3,&c3,&d3);\
+        printf("no of iteration:");
+        scanf("%d",&n);
+            for(i=1;i<=n;i++){
+                x=(d1-b1*y-c1*z)/a1;
+                y=(d2-a2*x-c2*z)/b2;
+                z=(d3-a3*x-b3*y)/c3;
+            }
+            printf("\n Solution : \n");
+            printf("x=%f\n",x);
+            printf("y=%f\n",y);
+            printf("z=%f\n",z);
+    return 0;
+}
