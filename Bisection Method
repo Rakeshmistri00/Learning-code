@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<math.h>
+    float f(float x){
+        return x*x*x-x-2;
+    }
+    int  main(){
+        float a,b,c;
+        printf("Enter a and b:\n ");
+        scanf("%f%f",&a,&b);
+            while(fabs(a-b)>0.0001){
+                c=(a+b)/2;
+                 if(f(a)*f(c)<0)
+                  b=c;
+                else
+                  a=c;    
+            }
+            printf("root = %f",c);
+            return 0;
+    }
