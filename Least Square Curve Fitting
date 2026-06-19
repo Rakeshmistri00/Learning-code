@@ -1,0 +1,33 @@
+#include<stdio.h>
+
+int main()
+{
+    int n,i;
+    float x[20],y[20];
+    float sx=0,sy=0,sxy=0,sx2=0;
+    float a,b;
+
+    printf("Enter number of points: ");
+    scanf("%d",&n);
+
+    printf("Enter x and y values:\n");
+
+    for(i=0;i<n;i++)
+    {
+        scanf("%f%f",&x[i],&y[i]);
+
+        sx=sx+x[i];
+        sy=sy+y[i];
+        sxy=sxy+x[i]*y[i];
+        sx2=sx2+x[i]*x[i];
+    }
+
+    b=(n*sxy-sx*sy)/(n*sx2-sx*sx);
+
+    a=(sy-b*sx)/n;
+
+    printf("\nBest Fit Line:\n");
+    printf("y = %.3f + %.3fx\n",a,b);
+
+    return 0;
+}
