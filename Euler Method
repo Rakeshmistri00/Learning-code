@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+float f(float x,float y)
+{
+    return x+y;
+}
+
+int main()
+{
+    float x,y,h;
+    int n,i;
+
+    printf("Enter x0, y0, h and n: ");
+    scanf("%f%f%f%d",&x,&y,&h,&n);
+
+    for(i=1;i<=n;i++)
+    {
+        y = y + h*f(x,y);
+        x = x + h;
+    }
+
+    printf("Value of y = %f",y);
+
+    return 0;
+}
